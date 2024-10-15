@@ -4,7 +4,8 @@ const port = 3000;
 
 app.get('/', (req, res) => {
     const title = req.query.title || 'Commodity Insights Cotton | AgriBazaar';
-    const image = req.query.image || 'https://blog.agribazaar.com/wp-content/uploads/2021/03/cotton.jpg';
+    // const image = req.query.image || 'https://blog.agribazaar.com/wp-content/uploads/2021/03/cotton.jpg';
+    const image = 'https://blog.agribazaar.com/wp-content/uploads/2021/03/cotton.jpg';
 
     const html = `
     <!DOCTYPE html>
