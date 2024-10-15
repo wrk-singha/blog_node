@@ -16,11 +16,15 @@ app.get('/', (req, res) => {
         <meta property="og:image:secure_url" content="${image}" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="1200" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="${req.protocol}://${req.get('host')}${req.originalUrl}" />
+        <meta property="og:description" content="This is a description for the preview." />
     </head>
     <body></body>
     </html>
     `;
 
+    res.setHeader('Content-Type', 'text/html');
     res.send(html);
 });
 
